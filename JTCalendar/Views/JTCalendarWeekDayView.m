@@ -47,8 +47,8 @@
         [dayViews addObject:label];
         
         label.textAlignment = NSTextAlignmentCenter;
-        label.textColor = [UIColor colorWithRed:152./256. green:147./256. blue:157./256. alpha:1.];
-        label.font = [UIFont systemFontOfSize:11];
+        label.textColor = [UIColor colorWithRed:80./256. green:94./256. blue:109./256. alpha:1.];
+        [label setFont:[UIFont fontWithName:@"SourceSansPro-SemiBold" size:label.font.pointSize]];
     }
     
     _dayViews = dayViews;
@@ -111,6 +111,7 @@
     
     for(UIView *dayView in _dayViews){
         dayView.frame = CGRectMake(x, 0, dayWidth, dayHeight);
+        [dayView setBackgroundColor:[UIColor colorWithRed:241./256. green:244./256. blue:245./256. alpha:1.]];
         x += dayWidth;
     }
 }
